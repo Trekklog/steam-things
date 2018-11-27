@@ -1,12 +1,18 @@
-var SteamMarketSearch = require('../index');
+const s_things = require('../index.js')
 
-// 311210 = Call of Duty: Black Ops III
 
-SteamMarketSearch.getMarketItems(311210).then(items => {
+// 319630 = Life is Strange
+s_things.market(319630).then(items => {
     console.log(items.count)
     // 37
     console.log(items.items)
 
 }).catch(err => {
-    console.log(`[ERR] ${err.name} -- ${err.message}`)
+    console.log(`[ERR - Market] ${err.name} -- ${err.message}`)
 })
+
+// s_things.search('Life is Strange').then(games => {
+//     console.log(games)
+// }).catch(err => {
+//     console.log(`[ERR - Search] ${err.name} -- ${err.message}`)
+// })
