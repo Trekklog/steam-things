@@ -1,6 +1,6 @@
 {
-  "name": "steam-market-search",
-  "version": "1.0.6",
+  "name": "steam-things",
+  "version": "1.0.8",
   "dependencies": {
     "node-fetch": "^2.3.0"
   },
@@ -11,23 +11,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/DrKain/SteamMarketSearch"
+    "url": "https://github.com/Trekklog/steam-things"
   },
-  "homepage": "https://github.com/DrKain/SteamMarketSearch",
-  "bugs": {
-    "url": "https://github.com/DrKain/SteamMarketSearch/issues"
-  },
-  "keywords": [
-    "steam",
-    "market",
-    "api",
-    "prices",
-    "search",
-    "emoticons",
-    "trading cards",
-    "backgrounds",
-    "booster packs"
-  ],
-  "author": "Kain (http://ksir.pw)",
+  "author": "Trekklog",
   "license": "MIT"
 }
