@@ -32,12 +32,13 @@ s_things.search(test.appid).then(games => {
 })
 
 
-// search market items for specific game, first element that matches with the input will be used
-s_things.marketByName(test.game).then(res => {
+// search market items for one or more games
+// game_limit and delay can be used too, but those fields are optional
+s_things.marketByName(game=test.game, games_limit=1, delay=1500).then(res => {
     if (res.error) console.log(res.error)
     else{
         console.log(res.items)
-        console.log(res.count)
+        console.log(res.games_count)
     }
 }).catch(err => {
          console.log(`[ERR - marketByName] ${err.name} -- ${err.message}`)
