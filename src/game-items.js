@@ -1,4 +1,5 @@
 const fetch = require('node-fetch')
+const options = require('./options/options')
 
 const steam_icon_url_route = 'https://steamcommunity-a.akamaihd.net/economy/image/'
 const steam_item_url_route = 'https://steamcommunity.com/market/listings/753/'
@@ -38,7 +39,9 @@ module.exports = {
     },
 
     pattern_finder(pattern) {
-        const reg = /(Booster Pack|Trading Card|Emoticon|Profile Background)/g
-        return pattern.match(reg)[0]
+        
+        const type_options = options.join('|')
+        const reg = new RegExp(`(${type_options})`, 'g')
+        return (pattern.match(reg)) ? pattern.match(reg)[0] : pattern
     },
 }
